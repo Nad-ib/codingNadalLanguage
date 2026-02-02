@@ -23,4 +23,29 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  .terminal-window {
+    width: 90vw !important;
+    height: 85vh !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+  .landscape-only {
+    display: flex !important;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+}
+
+.landscape-only {
+  display: none;
 }
